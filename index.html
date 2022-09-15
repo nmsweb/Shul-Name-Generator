@@ -8,48 +8,27 @@
 
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
+        <script type = "text/javascript" src="scripts.js"></script>
         <meta name="viewport" content = "width = device-width, initial-scale=1">
         <!--<link rel="icon" type="image/x-icon" href="favicon.ico" />-->
- 
     </head>
 
     <body style="background-color:powderblue;">
-        
         <h1>Welcome to shul name generator!</h1>
         <hr>
-        <p style = "text-align:center"> click the button to generate a shul name:</p>
+        <script>var empty = ""</script>
+        <button onclick="generator(empty,empty)"; style = "border-radius:100px;font-size: 24px;color:#0cb350;background-color:#6e0707;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Generate randomly</button>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <button onclick="generator()"; style = "border-radius:100px;font-size: 24px;color:#0cb350;background-color:#6e0707;margin-left:auto;margin-right:auto;display:block;margin-top:0%;margin-bottom:0%">Generate</button>
         <p style = "text-align:center"; id = "eng"></p>
         <p style = "text-align:center"; id = "result"></p>
-    <script>
-            function generator()
-            {
-                var first = ["אור" ,"צדקת" ,"רצון" ,"תיקון" ,"נצח" ,"שירת" ,"תשועת" ,"מנחת" ,"זכרון" ,"אהבת" ,"נר" ,"תורת" ,"בית" ,"שלוות" ,"דביר" ,"שיח" ,"בני" ,"שמחת" ,"רנת" ,"תפילת" ,"מצוות" ,"אוהל" ,"היכל", "דרכי"];
-                var second = ["אלעזר" ,"חנניה" ,"נחמיה" ,"עזרא" ,"עזריה" ,"גבריאל" ,"רפאל" ,"שאול" ,"איתן" ,"יונה" ,"שמעון" ,"יהודה" ,"אלישע" ,"יהושע" ,"דניאל" ,"לאה" ,"רחל" ,"רבקה" ,"שרה" ,"נחמה" ,"דוד" ,"אהרון" ,"משה" ,"שלמה" ,"יונתן" ,"יעקב" ,"יצחק" ,"אברהם" ,"ישראל", "יוסף", "ראובן", "יששכר", "נפטלי", "דן", "בנימין", "מנשה", "אפרים"];
-                var third = ["שפירו" ,"פרידמן" ,"קליין" ,"אייזן" ,"רובין" ,"הימלפרב" ,"שוורץ" ,"ויינברג" ,"שכטר" ,"הורוביץ" ,"אהרונסון" ,"יעקובסון" ,"אברהמסון" ,"ליבוביץ" ,"לוין" ,"לוי" ,"כהן" ,"אבוחצירא" ,"שרייבר" ,"וייס" ,"שוורץ","גולדברג" ,"גרינברג"];
-                var first_random = Math.floor(Math.random() * first.length);
-                var second_random = Math.floor(Math.random() * second.length);
-                var third_random = Math.floor(Math.random() * third.length);
-                document.getElementById("eng").innerHTML = (
-                'Generated shul name: ');
-                document.getElementById("result").innerHTML =
-                (first[first_random]
-                + ' ' +
-                second[second_random] +
-                ' ע״ש ' +
-                second[second_random] +
-                ' ' +
-                third[third_random] 
-                );
-                document.getElementById("result").style.fontSize = "x-large";
-                document.getElementById("eng").style.fontSize = "x-large";
-            }
-    </script> 
+        <hr>
+        <h1> or name after someone:</h1>
+        <p style="text-align:center">First name:</p>
+        <input type="text" id="f_name" value="" style="display:block;margin:0 auto">
+        <p style="text-align:center">Last name:</p>
+        <input type="text" id="l_name" value="" style="display:block;margin:0 auto">
+        <br>
+        <button onclick="choose_name()" style="display:block;margin:0 auto">Enter</button>
         <!-- Load external JavaScript -->
         <script src="scripts.js"></script>
         
