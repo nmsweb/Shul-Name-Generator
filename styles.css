@@ -2,9 +2,9 @@
 
 h1 {
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
-    color: #565c5e;
+    color: #49493c;
 }
 
 
@@ -26,9 +26,9 @@ h1 {
 }
 
 .btn-41 {
-  border: 2px solid #455954;
+  border: 2px solid #0e153a;
   z-index: 1;
-  color: #455954;
+  color: #0e153a;
 }
 
 .btn-41:after {
@@ -40,7 +40,7 @@ h1 {
   left: 0;
   direction: rtl;
   z-index: -1;
-  background: #b5c2c7;
+  background: #7bcace;
   transition: all 0.3s ease;
 }
 
