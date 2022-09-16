@@ -10,7 +10,7 @@ function generator1()
     document.getElementById("result").innerHTML = (first[first_random] + ' ' + second[second_random]);
     document.getElementById("result").style.fontSize = "x-large";
     document.getElementById("eng").style.fontSize = "x-large";
-    document.getElementById("doner").innerHTML = ('');
+    document.getElementById("donor").innerHTML = ('');
     x = second[second_random];
 }
 
@@ -35,8 +35,8 @@ function name_after()
     }
     var third = ["שפירו" ,"פרידמן" ,"קליין" ,"אייזן" ,"רובין" ,"הימלפרב" ,"שוורץ" ,"ויינברג" ,"שכטר" ,"הורוביץ" ,"אהרונסון" ,"יעקובסון" ,"אברהמסון" ,"ליבוביץ" ,"לוין" ,"לוי" ,"כהן" ,"אבוחצירא" ,"שרייבר" ,"וייס" ,"שוורץ","גולדברג" ,"גרינברג","אדלמן"];
     var l_name = Math.floor(Math.random() * third.length);
-    document.getElementById("doner").innerHTML = (x + " " + third[l_name]);
-    document.getElementById("doner").style.fontSize = "x-large";
+    document.getElementById("donor").innerHTML = (x + " " + third[l_name]);
+    document.getElementById("donor").style.fontSize = "x-large";
 }
 
 function choose_name()
@@ -51,6 +51,9 @@ function clear_box()
 {
     document.getElementById('f_name').value = "";
     document.getElementById('l_name').value = "";
+    document.getElementById('donor').innerHTML = "";
+    x = "";
+    
 }
 
 function call_two()
