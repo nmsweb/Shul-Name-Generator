@@ -45,6 +45,11 @@ function choose_name()
 {
     var f_name = document.getElementById("f_name").value;
     var l_name = document.getElementById("l_name").value;
+    if (f_name == ""|| l_name == "")
+    {
+        alert("Error: please enter a name first!");
+        return 0;
+    }
     if(!(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(f_name)))
     {
         alert("Error: please enter a name in hebrew!");
@@ -53,11 +58,6 @@ function choose_name()
     if(!(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(l_name)))
     {
         alert("Error: please enter a name in hebrew!");
-        return 0;
-    }
-    if (f_name == ""|| l_name == "")
-    {
-        alert("Error: please enter a name first!");
         return 0;
     }
     document.getElementById('donor').innerHTML = f_name + " " + l_name;
