@@ -1,14 +1,32 @@
 var x = "";
+var first = ["נווה", "תפארת", "ברית", "עטרת", "פאר", "זכות", "דרכי", "היכל", "מצוות", "תפילת", "רינת", "שמחת", "שלוות", "בית", "אהבת", "זכרון", "מנחת", "תשועת", "צדקת", "שירת", "דביר", "קרן", "שושנת", "יד", "עץ", "בני", "נצח", "שיח", "אוהל", "אור", "רצון", "תיקון", "נר", "תורת", "משכן"];
+var w_jeshurun = ["נווה", "תפארת", "ברית", "עטרת", "פאר", "זכות", "דרכי", "היכל", "מצוות", "תפילת", "רינת", "שמחת", "שלוות", "בית", "אהבת", "זכרון", "מנחת", "תשועת", "צדקת", "בני", "נצח", "שיח", "אוהל"];
+var w_olam = ["נווה", "תפארת", "ברית", "עטרת", "פאר", "זכות", "דרכי", "היכל", "מצוות", "תפילת", "רינת", "שמחת", "שלוות", "בית", "אהבת", "זכרון", "מנחת", "תשועת", "צדקת", "אור", "רצון", "תיקון", "נר", "תורת", "משכן", "שם"];
+var rand_first;
 
 function generator1()
 {
     clear_box();
-    var second = ["אלעזר" ,"חנניה" ,"נחמיה" ,"עזרא" ,"עזריה" ,"גבריאל" ,"רפאל" ,"שאול" ,"איתן" ,"יונה" ,"שמעון" ,"יהודה" ,"אלישע" ,"יהושע" ,"דניאל" ,"לאה" ,"רחל" ,"רבקה" ,"שרה" ,"נחמה" ,"דוד" ,"אהרון" ,"משה" ,"שלמה" ,"יונתן" ,"יעקב" ,"יצחק" ,"אברהם" ,"ישראל", "יוסף", "ראובן", "יששכר", "נפתלי", "דן", "בנימין", "מנשה", "אפרים", "עקיבא", "אסתר"];
-    var first = ["אור" ,"צדקת" ,"רצון" ,"תיקון" ,"נצח" ,"שירת" ,"תשועת" ,"מנחת" ,"זכרון" ,"אהבת" ,"נר" ,"תורת" ,"בית" ,"שלוות" ,"דביר" ,"שיח" ,"בני" ,"שמחת" ,"רנת" ,"תפילת" ,"מצוות" ,"אוהל" ,"היכל", "דרכי", "קרן", "שושנת", "רינת", "זכות", "פאר", "עטרת", "יד", "ברית", "תפארת"];
-    var first_random = Math.floor(Math.random() * first.length);
+    var second = ["אלעזר" ,"חנניה" ,"נחמיה" ,"עזרא" ,"עזריה" ,"גבריאל" ,"רפאל" ,"שאול" ,"איתן" ,"יונה" ,"שמעון" ,"יהודה" ,"אלישע" ,"יהושע" ,"דניאל" ,"לאה" ,"רחל" ,"רבקה" ,"שרה" ,"נחמה" ,"דוד" ,"אהרון" ,"משה" ,"שלמה" ,"יונתן" ,"יעקב" ,"יצחק" ,"אברהם" ,"ישראל", "יוסף", "ראובן", "יששכר", "נפתלי", "דן", "בנימין", "מנשה", "אפרים", "עקיבא", "אסתר", "חיים", "ישורון", "עולם"];
     var second_random = Math.floor(Math.random() * second.length);
+    if (second[second_random] == "ישורון")
+    {
+        rand_first = w_jeshurun.slice();
+        document.getElementById("alshem").style.visibility="hidden";
+    }
+    else if (second[second_random] == "עולם")
+    {
+        rand_first = w_olam.slice();
+        document.getElementById("alshem").style.visibility="hidden";
+    }
+    else
+    {
+        rand_first = first.slice();
+        document.getElementById("alshem").style.visibility="visible";
+    }
+    var first_random = Math.floor(Math.random() * rand_first.length);
     document.getElementById("eng").innerHTML = ('Generated shul name: ');
-    document.getElementById("result").innerHTML = (first[first_random] + ' ' + second[second_random]);
+    document.getElementById("result").innerHTML = (rand_first[first_random] + ' ' + second[second_random]);
     document.getElementById("result").style.fontSize = "x-large";
     document.getElementById("eng").style.fontSize = "x-large";
     document.getElementById("donor").innerHTML = ('');
@@ -17,7 +35,6 @@ function generator1()
 
 function generator2(f_name)
 {
-    var first = ["אור" ,"צדקת" ,"רצון" ,"תיקון" ,"נצח" ,"שירת" ,"תשועת" ,"מנחת" ,"זכרון" ,"אהבת" ,"נר" ,"תורת" ,"בית" ,"שלוות" ,"דביר" ,"שיח" ,"בני" ,"שמחת" ,"רנת" ,"תפילת" ,"מצוות" ,"אוהל" ,"היכל", "דרכי", "קרן", "שושנת", "רינת", "זכות", "פאר", "עטרת", "יד", "ברית", "תפארת"];
     var first_random = Math.floor(Math.random() * first.length);
     document.getElementById("eng").innerHTML = ('Generated shul name: ');
     document.getElementById("result").innerHTML = (first[first_random] + ' ' + f_name);
@@ -30,11 +47,6 @@ function generator2(f_name)
 
 function name_after()
 {
-    if (x == "")
-    {
-        alert("Error: Please generate a shul name first");
-        return 0;
-    }
     var third = ["שפירו" ,"פרידמן" ,"קליין" ,"אייזן" ,"רובין" ,"הימלפרב" ,"שוורץ" ,"ויינברג" ,"שכטר" ,"הורוביץ" ,"אהרונסון" ,"יעקובסון" ,"אברהמסון" ,"ליבוביץ" ,"לוין" ,"לוי" ,"כהן" ,"אבוחצירא" ,"שרייבר" ,"וייס" ,"שוורץ","גולדברג" ,"גרינברג","אדלמן", "הופמן", "גולדמן", "בלאו", "בלום", "ליברמן", "ברנשטיין", "מלמד", "שטרן", "אלטמן", "לנדאו", "ליכטנשטיין", "קפלן", "בלוך", "ברקוביץ", "בוהם", "שולמן", "פרלמן"];
     var l_name = Math.floor(Math.random() * third.length);
     document.getElementById("donor").innerHTML = (x + " " + third[l_name]);
@@ -61,6 +73,7 @@ function choose_name()
         return 0;
     }
     document.getElementById('donor').innerHTML = f_name + " " + l_name;
+    document.getElementById("alshem").style.visibility="visible";
     generator2(f_name);
 }
 
