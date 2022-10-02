@@ -66,6 +66,7 @@ p {
 
 
 .toggler-wrapper {
+  align-content: center;  
   display: block;
   width: 45px;
   height: 25px;
