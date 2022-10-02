@@ -71,8 +71,12 @@ p {
   width: 45px;
   height: 25px;
   cursor: pointer;
+  align-content: center;  
   position: relative;
-  margin-left: 48.5%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
 }
 
 .toggler-wrapper input[type="checkbox"] {
