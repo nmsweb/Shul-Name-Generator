@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Shul name generator</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="../styles.css" type = "text/css">
+        <script type = "text/javascript" src="../scripts/hebscripts.js"></script>
+        <meta name="viewport" content = "width = device-width, initial-scale=1">
+    </head>
+
+    <body style="background-color:#e2f3f5">
+        <a onclick = "open_eng()" class="btn41-43 btn-41" style="float: left;height: 20px;">English</a>
+        <br>
+        <br>
+        <h1>!ברוכים הבאים למחולל שמות בתי כנסת</h1>
+        <hr style="background-color: #678eb4; height: 1px; border: 0;">
+        <h1>:ליצור שם</h1>
+        <a onclick = "generator1()"  class="btn41-43 btn-41">
+        לחץ כאן
+        </a>
+        <p style = "text-align:center;color: #100b8c;"; id = "result"></p>
+        <a onclick = "name_after()"  id = "alshem" class="btn41-43 btn-41" style="visibility: hidden;">
+        על שם
+        </a>
+        <p style = "text-align:center;color: #100b8c;"; id = "donor"></p>
+        <hr style="background-color: #678eb4; height: 1px; border: 0;">
+        <h1>:ליצור שם לבית כנסת על שם מישהו</h1>
+        <p style="text-align:center;color:#49493c ;";>:שם פרטי</p>
+        <input type="text" lang = "he" id="f_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
+        <p style="text-align:center;color: #49493c;">:שם משפחה</p>
+        <input type="text" lang = "he" id="l_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
+        <br>
+        <a onclick = "choose_name()"  class="btn41-43 btn-41">
+        ליצור
+        </a>
+        <!-- Load external JavaScript -->
+        <script src="../scripts/hebscripts.js"></script>
+        
+    </body>
+
+</html>

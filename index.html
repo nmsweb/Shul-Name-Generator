@@ -8,37 +8,23 @@
 
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="styles.css">
-        <script type = "text/javascript" src="scripts.js"></script>
         <meta name="viewport" content = "width = device-width, initial-scale=1">
-        <!--<link rel="icon" type="image/x-icon" href="favicon.ico" />-->
+        <meta name="google-site-verification" content="shul name generator">
     </head>
 
-    <body style="background-color:#e2f3f5">
+    <body style="background-color:#e2f3f5";>
         <h1>Welcome to Shul Name Generator!</h1>
-        <hr style="background-color: #678eb4; height: 1px; border: 0;">
-        <h1>Generate randomly:</h1>
-        <a onclick = "generator1()"  class="btn41-43 btn-41">
-        Generate
-        </a>
-        <p style = "text-align:center;color: #49493c;"; id = "eng"></p>
-        <p style = "text-align:center;color: #100b8c;"; id = "result"></p>
-        <a onclick = "name_after()"  id = "alshem" class="btn41-43 btn-41" style="visibility: hidden;">
-        על שם
-        </a>
-        <p style = "text-align:center;color: #100b8c;"; id = "donor"></p>
-        <hr style="background-color: #678eb4; height: 1px; border: 0;">
-        <h1>Name after someone:</h1>
-        <p style="text-align:center;color:#49493c ;";>First name:</p>
-        <input type="text" lang = "he" id="f_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
-        <p style="text-align:center;color: #49493c;">Last name:</p>
-        <input type="text" lang = "he" id="l_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
         <br>
-        <a onclick = "choose_name()"  class="btn41-43 btn-41">
-        Enter
-        </a>
+        <br>
+        <br>
+        <br>
+        <p> Please choose a language for your shul name:</p>
+        <div style = "margin-left:42%;">
+            <a onclick = "fopen_heb()" class="btn41-43 btn-41" style="float: left;height: 20px;">עברית</a>
+            <a onclick = "fopen_eng()" class="btn41-43 btn-41" style="float: left;height: 20px;">English</a>
+        </div>
         <!-- Load external JavaScript -->
-        <script src="scripts.js"></script>
-        
+        <script src="scripts/scripts.js"></script>  
     </body>
 
 </html>

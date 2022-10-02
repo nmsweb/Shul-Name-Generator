@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Shul name generator</title>
+
+        <!-- Load external CSS styles -->
+        <link rel="stylesheet" href="../styles.css" type = "text/css">
+        <script type = "text/javascript" src="../scripts/engscripts.js"></script>
+        <meta name="viewport" content = "width = device-width, initial-scale=1">
+    </head>
+
+    <body style="background-color:#e2f3f5">
+        <a onclick = "open_heb()" class="btn41-43 btn-41" style="float: right;height: 20px;">עברית</a>
+        <br>
+        <br>
+        <h1>Welcome to Shul Name Generator!</h1>
+        <hr style="background-color: #678eb4; height: 1px; border: 0;">
+        <h1>Generate a name:</h1>
+        <div style="text-align: center;">
+            <div class="badge">Yeshivish</div>
+            <label class="toggler-wrapper style-1">
+              <input type="checkbox" id = "myCheck" onclick="checkbox()">
+              <div class="toggler-slider">
+                <div class="toggler-knob"></div>
+              </div>
+            </label>
+        </div>
+        <br>
+        <a onclick = "generator1()"  class="btn41-43 btn-41">
+        Generate
+        </a>
+        <p style = "text-align:center;color: #100b8c;"; id = "result"></p>
+        <p style = "text-align:center;color: #49493c;" id = "memory"></p>
+        <p style = "text-align:center;color: #100b8c;"; id = "donor"></p>
+        <hr style="background-color: #678eb4; height: 1px; border: 0;">
+        <h1>Name after someone:</h1>
+        <p style="text-align:center;color:#49493c ;";>First Name:</p>
+        <input type="text" lang = "he" id="f_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
+        <p style="text-align:center;color: #49493c;">Last Name:</p>
+        <input type="text" lang = "he" id="l_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
+        <br>
+        <div class="checkboxes" style = "margin-left: 45%;">
+            <label class="container">Donor
+                <input type="radio" name = "radio" value="unchecked" id = "isdonor" style="border-radius:25px">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <div class="checkboxes" style = "margin-left: 45%;">
+            <label class="container">In memory of
+                <input type="radio" value="unchecked" name="radio" id = "isdead">
+                <span class="checkmark"></span>
+            </label>
+        </div>
+        <br>
+        <a onclick = "two_things()"  class="btn41-43 btn-41">
+        Enter
+        </a>
+        <!-- Load external JavaScript -->
+        <script src="../scripts/engscripts.js"></script>
+        
+    </body>
+
+</html>

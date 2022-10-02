@@ -25,10 +25,8 @@ function generator1()
         document.getElementById("alshem").style.visibility="visible";
     }
     var first_random = Math.floor(Math.random() * rand_first.length);
-    document.getElementById("eng").innerHTML = ('Generated shul name: ');
     document.getElementById("result").innerHTML = (rand_first[first_random] + ' ' + second[second_random]);
     document.getElementById("result").style.fontSize = "x-large";
-    document.getElementById("eng").style.fontSize = "x-large";
     document.getElementById("donor").innerHTML = ('');
     x = second[second_random];
 }
@@ -36,10 +34,8 @@ function generator1()
 function generator2(f_name)
 {
     var first_random = Math.floor(Math.random() * first.length);
-    document.getElementById("eng").innerHTML = ('Generated shul name: ');
     document.getElementById("result").innerHTML = (first[first_random] + ' ' + f_name);
     document.getElementById("result").style.fontSize = "x-large";
-    document.getElementById("eng").style.fontSize = "x-large";
     document.getElementById("donor").style.fontSize = "x-large";
     x = f_name;
 }
@@ -59,17 +55,17 @@ function choose_name()
     var l_name = document.getElementById("l_name").value;
     if (f_name == ""|| l_name == "")
     {
-        alert("Error: please enter a name first!");
+        alert("Error: !נא להכניס שם");
         return 0;
     }
     if(!(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(f_name)))
     {
-        alert("Error: please enter a name in hebrew!");
+        alert("Error: !נא להכניס שם בעברית");
         return 0;
     }
     if(!(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(l_name)))
     {
-        alert("Error: please enter a name in hebrew!");
+        alert("Error: !נא להכניס שם בעברית");
         return 0;
     }
     document.getElementById('donor').innerHTML = f_name + " " + l_name;
@@ -83,3 +79,10 @@ function clear_box()
     document.getElementById('f_name').value = "";
     document.getElementById('l_name').value = "";
 }
+
+
+function open_eng()
+{
+    window.open("eng.html", "_self");
+}
+
