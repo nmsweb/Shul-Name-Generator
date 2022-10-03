@@ -43,6 +43,7 @@ function generator1()
     }
     document.getElementById("result").innerHTML = (beginning_rand + " " + first_random + ' ' + second_random);
     document.getElementById("result").style.fontSize = "x-large";
+    document.getElementById("copy_button").style.visibility = "visible";
 }
 
 
@@ -70,6 +71,7 @@ function generator2(f_name)
     document.getElementById("result").style.fontSize = "x-large";
     document.getElementById("donor").style.fontSize = "x-large";
     x = f_name;
+    document.getElementById("copy_button").style.visibility = "visible";
 }
 
 
@@ -153,4 +155,11 @@ function checkbox(){
     {
         yeshivish = false;
     }
+}
+
+
+
+function copy_text(text)
+{
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", text);
 }
