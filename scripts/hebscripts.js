@@ -6,6 +6,7 @@ var rand_first;
 
 function generator1()
 {
+    document.getElementById("copy_button").innerHTML= "העתק";
     clear_box();
     var second = ["אלעזר" ,"חנניה" ,"נחמיה" ,"עזרא" ,"עזריה" ,"גבריאל" ,"רפאל" ,"שאול" ,"איתן" ,"יונה" ,"שמעון" ,"יהודה" ,"אלישע" ,"יהושע" ,"דניאל" ,"לאה" ,"רחל" ,"רבקה" ,"שרה" ,"נחמה" ,"דוד" ,"אהרון" ,"משה" ,"שלמה" ,"יונתן" ,"יעקב" ,"יצחק" ,"אברהם" ,"ישראל", "יוסף", "ראובן", "יששכר", "נפתלי", "דן", "בנימין", "מנשה", "אפרים", "עקיבא", "אסתר", "חיים", "ישורון", "עולם"];
     var second_random = Math.floor(Math.random() * second.length);
@@ -34,6 +35,7 @@ function generator1()
 
 function generator2(f_name)
 {
+    document.getElementById("copy_button").innerHTML= "העתק";
     var first_random = Math.floor(Math.random() * first.length);
     document.getElementById("result").innerHTML = (first[first_random] + ' ' + f_name);
     document.getElementById("result").style.fontSize = "x-large";

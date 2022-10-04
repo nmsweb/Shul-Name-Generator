@@ -16,6 +16,7 @@ var beginning_rand;
 
 function generator1()
 {
+    document.getElementById("copy_button").innerHTML= "Copy";
     document.getElementById("memory").innerHTML = "";
     document.getElementById("donor").innerHTML = "";
     clear_radio();
@@ -49,6 +50,7 @@ function generator1()
 
 function generator2(f_name)
 {
+    document.getElementById("copy_button").innerHTML= "Copy";
     if (yeshivish == true)
     {
         allfirst = orth_nafter;
