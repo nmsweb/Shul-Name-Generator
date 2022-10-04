@@ -29,6 +29,7 @@ function generator1()
     document.getElementById("result").style.fontSize = "x-large";
     document.getElementById("donor").innerHTML = ('');
     x = second[second_random];
+    if (isMobile.any()) {document.getElementById("copy_button").style.visibility = "visible";}
 }
 
 function generator2(f_name)
@@ -38,6 +39,7 @@ function generator2(f_name)
     document.getElementById("result").style.fontSize = "x-large";
     document.getElementById("donor").style.fontSize = "x-large";
     x = f_name;
+    if (isMobile.any()) {document.getElementById("copy_button").style.visibility = "visible";}
 }
 
 
@@ -85,4 +87,35 @@ function open_eng()
 {
     window.open("eng.html", "_self");
 }
+
+
+
+function copy_text(text)
+{
+    navigator.clipboard.writeText(text);
+    alert("!הועתק");
+}
+
+
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }
+};
 
