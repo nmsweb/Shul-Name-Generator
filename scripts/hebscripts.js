@@ -93,7 +93,7 @@ function open_eng()
 function copy_text(text)
 {
     navigator.clipboard.writeText(text);
-    alert("!הועתק");
+    document.getElementById("copy_button").value= "!הועתק";
 }
 
 

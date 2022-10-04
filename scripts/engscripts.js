@@ -162,7 +162,7 @@ function checkbox(){
 function copy_text(text)
 {
     navigator.clipboard.writeText(text);
-    alert("Copied!");
+    document.getElementById("copy_button").value= "Copied!";
 }
 
 
