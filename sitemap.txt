@@ -1,8 +1,8 @@
-https://nschorr1.github.io//index.html
-https://nschorr1.github.io//languages/heb.html
-https://nschorr1.github.io//languages/eng.html
-https://nschorr1.github.io//googleff2b1a68ce64839f.html
-https://nschorr1.github.io//scripts/hebscripts.js
-https://nschorr1.github.io//scripts/engscripts.js
-https://nschorr1.github.io//scripts/scripts.js
-https://nschorr1.github.io//styles.css
+https://Shul-Name-Generator.github.io//index.html
+https://Shul-Name-Generator.github.io//languages/heb.html
+https://Shul-Name-Generator.github.io//languages/eng.html
+https://Shul-Name-Generator.github.io//googleff2b1a68ce64839f.html
+https://Shul-Name-Generator.github.io//scripts/hebscripts.js
+https://Shul-Name-Generator.github.io//scripts/engscripts.js
+https://Shul-Name-Generator.github.io//scripts/scripts.js
+https://Shul-Name-Generator.github.io//styles.css
