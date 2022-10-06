@@ -6,3 +6,4 @@ https://Shul-Name-Generator.github.io//scripts/hebscripts.js
 https://Shul-Name-Generator.github.io//scripts/engscripts.js
 https://Shul-Name-Generator.github.io//scripts/scripts.js
 https://Shul-Name-Generator.github.io//styles.css
+https://Shul-Name-Generator.github.io//favicon_package_v0.16.zip
