@@ -142,5 +142,5 @@ function copy_button_gen(){
     document.getElementById("copy_button").classList.remove("copy_button_after");
     document.getElementById("copy_button").classList.add("btn-41");
     document.getElementById("copy_button").classList.add("btn41-43");
-    document.getElementById("copy_button").onclick = "copy_text(result.innerHTML)";
+    document.getElementById("copy_button").onclick = function(){copy_text(document.getElementById("result"))};
 }
