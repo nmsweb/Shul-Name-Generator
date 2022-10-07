@@ -1,6 +1,5 @@
 /* Place your CSS styles in this file */
-
-h1 {
+h1, h3{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
     font-weight: normal;
@@ -16,6 +15,15 @@ p {
     font-size: large;
 }
 
+
+hr{
+  background-color: #678eb4;
+  height: 1px; 
+}
+
+.begins_hidden{
+  visibility: hidden;
+}
 
 
 .btn41-43 {
@@ -35,9 +43,10 @@ p {
 }
 
 .btn-41 {
-  border: 2px solid #0e153a;
+  border: 2px solid #678eb4;
+  border-style: outset;
   z-index: 1;
-  color: #0e153a;
+  color: #3a320e;
 }
 
 .btn-41:after {
@@ -62,6 +71,7 @@ p {
 
 .btn-41:active {
   top: 2px;
+  border-style: inset;
 }
 
 
@@ -209,3 +219,45 @@ p {
   .checkboxes label span {
     vertical-align: middle;
   }
+  .checkboxes{
+    margin-left:45%;
+  }
+
+
+
+
+
+#eng_button{
+  float: left;
+  height: 20px;
+}
+
+#heb_button{
+  float: right;
+  height: 20px;
+}
+
+.text_input{
+  display:block;
+  margin: auto;
+  background-color:#7bcace;
+  color:#100b8c;
+}
+
+
+.copy_button_after{
+  align-content: center;
+  padding: 10px 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  background-color: #7bcace;
+  outline: none !important;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  border: 2px solid #678eb4;
+  z-index: 1;
+  color: #3a320e;
+}

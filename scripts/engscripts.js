@@ -165,6 +165,11 @@ function copy_text(text)
 {
     navigator.clipboard.writeText(text);
     document.getElementById("copy_button").innerHTML= "Copied!";
+    document.getElementById("copy_button").style.borderStyle = "inset";
+    document.getElementById("copy_button").classList.remove("btn41-43");
+    document.getElementById("copy_button").classList.remove("btn-41");
+    document.getElementById("copy_button").classList.add("copy_button_after");
+    document.getElementById("copy_button").onclick = "";
 }
 
 

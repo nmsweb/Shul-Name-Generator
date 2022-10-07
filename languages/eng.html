@@ -5,7 +5,7 @@
         <meta charset="utf-8">
 
         <title>Shul name generator</title>
-
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
         <!-- Load external CSS styles -->
         <link rel="stylesheet" href="../styles.css" type = "text/css">
         <script type = "text/javascript" src="../scripts/engscripts.js"></script>
@@ -13,11 +13,11 @@
     </head>
 
     <body style="background-color:#e2f3f5">
-        <a onclick = "open_heb()" class="btn41-43 btn-41" style="float: right;height: 20px;">עברית</a>
+        <a onclick = "open_heb()" class="btn41-43 btn-41" id = "heb_button">עברית</a>
         <br>
         <br>
         <h1>Welcome to Shul Name Generator!</h1>
-        <hr style="background-color: #678eb4; height: 1px; border: 0;">
+        <hr>
         <h1>Generate a name:</h1>
         <div style="text-align: center;">
             <div class="badge">Yeshivish</div>
@@ -35,23 +35,23 @@
         <p style = "text-align:center;color: #100b8c;"; id = "result"></p>
         <p style = "text-align:center;color: #49493c;" id = "memory"></p>
         <p style = "text-align:center;color: #100b8c;"; id = "donor"></p>
-        <a onclick = "copy_text(result.innerHTML)"  class="btn41-43 btn-41" id = "copy_button" style = "visibility: hidden">
+        <a onclick = "copy_text(result.innerHTML)"  class="btn41-43 btn-41 begins_hidden" id = "copy_button">
             copy shul name
         </a>
-        <hr style="background-color: #678eb4; height: 1px; border: 0;">
+        <hr>
         <h1>Name after someone:</h1>
         <p style="text-align:center;color:#49493c ;";>First Name:</p>
-        <input type="text" lang = "he" id="f_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
+        <input type="text" lang = "he" id="f_name" value="" class = "text_input">
         <p style="text-align:center;color: #49493c;">Last Name:</p>
-        <input type="text" lang = "he" id="l_name" value="" style="display:block;margin:0 auto;background-color:#7bcace;color:#100b8c">
+        <input type="text" lang = "he" id="l_name" value="" class = "text_input">
         <br>
-        <div class="checkboxes" style = "margin-left: 45%;">
+        <div class="checkboxes">
             <label class="container">Donor
                 <input type="radio" name = "radio" value="unchecked" id = "isdonor" style="border-radius:25px">
                 <span class="checkmark"></span>
             </label>
         </div>
-        <div class="checkboxes" style = "margin-left: 45%;">
+        <div class="checkboxes">
             <label class="container">In memory of
                 <input type="radio" value="unchecked" name="radio" id = "isdead">
                 <span class="checkmark"></span>

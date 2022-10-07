@@ -42,6 +42,7 @@ function generator2(f_name)
     document.getElementById("donor").style.fontSize = "x-large";
     x = f_name;
     if (isMobile.any()) {document.getElementById("copy_button").style.visibility = "visible";}
+
 }
 
 
@@ -51,6 +52,7 @@ function name_after()
     var l_name = Math.floor(Math.random() * third.length);
     document.getElementById("donor").innerHTML = (x + " " + third[l_name]);
     document.getElementById("donor").style.fontSize = "x-large";
+
 }
 
 function choose_name()
@@ -96,6 +98,11 @@ function copy_text(text)
 {
     navigator.clipboard.writeText(text);
     document.getElementById("copy_button").innerHTML= "!הועתק";
+    document.getElementById("copy_button").style.borderStyle = "inset";
+    document.getElementById("copy_button").classList.remove("btn41-43");
+    document.getElementById("copy_button").classList.remove("btn-41");
+    document.getElementById("copy_button").classList.add("copy_button_after");
+    document.getElementById("copy_button").onclick = "";
 }
 
 
@@ -120,4 +127,3 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
-
