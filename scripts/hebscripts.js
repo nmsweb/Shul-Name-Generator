@@ -6,7 +6,7 @@ var rand_first;
 
 function generator1()
 {
-    document.getElementById("copy_button").innerHTML= "העתק";
+    copy_button_gen();
     clear_box();
     var second = ["אלעזר" ,"חנניה" ,"נחמיה" ,"עזרא" ,"עזריה" ,"גבריאל" ,"רפאל" ,"שאול" ,"איתן" ,"יונה" ,"שמעון" ,"יהודה" ,"אלישע" ,"יהושע" ,"דניאל" ,"לאה" ,"רחל" ,"רבקה" ,"שרה" ,"נחמה" ,"דוד" ,"אהרון" ,"משה" ,"שלמה" ,"יונתן" ,"יעקב" ,"יצחק" ,"אברהם" ,"ישראל", "יוסף", "ראובן", "יששכר", "נפתלי", "דן", "בנימין", "מנשה", "אפרים", "עקיבא", "אסתר", "חיים", "ישורון", "עולם"];
     var second_random = Math.floor(Math.random() * second.length);
@@ -35,7 +35,7 @@ function generator1()
 
 function generator2(f_name)
 {
-    document.getElementById("copy_button").innerHTML= "העתק";
+    copy_button_gen();
     var first_random = Math.floor(Math.random() * first.length);
     document.getElementById("result").innerHTML = (first[first_random] + ' ' + f_name);
     document.getElementById("result").style.fontSize = "x-large";
@@ -127,3 +127,14 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+
+
+
+function copy_button_gen(){
+    document.getElementById("copy_button").innerHTML= "העתק";
+    document.getElementById("copy_button").style.borderStyle = "outset";
+    document.getElementById("copy_button").classList.remove("copy_button_after");
+    document.getElementById("copy_button").classList.add("btn-41");
+    document.getElementById("copy_button").classList.add("btn41-43");
+    document.getElementById("copy_button").onclick = "copy_text(result.innerHTML)";
+}

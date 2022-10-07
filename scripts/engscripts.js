@@ -16,7 +16,7 @@ var beginning_rand;
 
 function generator1()
 {
-    document.getElementById("copy_button").innerHTML= "Copy";
+    copy_button_gen();
     document.getElementById("memory").innerHTML = "";
     document.getElementById("donor").innerHTML = "";
     clear_radio();
@@ -50,7 +50,7 @@ function generator1()
 
 function generator2(f_name)
 {
-    document.getElementById("copy_button").innerHTML= "Copy";
+    copy_button_gen();
     if (yeshivish == true)
     {
         allfirst = orth_nafter;
@@ -194,3 +194,14 @@ var isMobile = {
         return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
     }
 };
+
+
+
+function copy_button_gen(){
+    document.getElementById("copy_button").innerHTML= "Copy";
+    document.getElementById("copy_button").style.borderStyle = "outset";
+    document.getElementById("copy_button").classList.remove("copy_button_after");
+    document.getElementById("copy_button").classList.add("btn-41");
+    document.getElementById("copy_button").classList.add("btn41-43");
+    document.getElementById("copy_button").onclick = "copy_text(result.innerHTML)";
+}
