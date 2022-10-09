@@ -95,9 +95,12 @@ function open_eng()
 
 
 
-function copy_text(text)
+function copy_text()
 {
-    navigator.clipboard.writeText(text);
+    if (document.getElementById("donor").innerHTML == "")
+    {navigator.clipboard.writeText(document.getElementById("result").innerHTML);}
+    else{var x = document.getElementById("result").innerHTML + " " + document.getElementById("donor").innerHTML;
+    navigator.clipboard.writeText(x);}
     document.getElementById("copy_button").innerHTML= "!הועתק";
     document.getElementById("copy_button").style.borderStyle = "inset";
     document.getElementById("copy_button").classList.remove("btn41-43");
