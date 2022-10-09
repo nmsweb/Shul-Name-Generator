@@ -99,7 +99,7 @@ function copy_text()
 {
     if (document.getElementById("donor").innerHTML == "")
     {navigator.clipboard.writeText(document.getElementById("result").innerHTML);}
-    else{var x = document.getElementById("result").innerHTML + " " + document.getElementById("donor").innerHTML;
+    else{var x = document.getElementById("result").innerHTML + " על שם " + document.getElementById("donor").innerHTML;
     navigator.clipboard.writeText(x);}
     document.getElementById("copy_button").innerHTML= "!הועתק";
     document.getElementById("copy_button").style.borderStyle = "inset";
