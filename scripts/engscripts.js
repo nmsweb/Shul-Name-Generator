@@ -95,12 +95,7 @@ function check_radio()
 {
     var checkBox1 = document.getElementById("isdonor");
     var checkBox2 = document.getElementById("isdead");
-    if (checkBox1.checked == false && checkBox2.checked == false)
-    {
-        alert("Error: please choose one of the above!");
-        return 0;
-    }
-    else if(checkBox1.checked == true)
+    if(checkBox1.checked == true)
     {
         document.getElementById("memory").innerHTML = "Generously donated by";
     }
@@ -115,18 +110,24 @@ function two_things()
 {
     var f_name = document.getElementById("f_name").value;
     var l_name = document.getElementById("l_name").value;
-    if (f_name == ""|| l_name == "")
+    if (document.getElementById("text_checkf").value != 1)
     {
-        alert("Error: Please enter a name!");
+        check_field("f_name");
+        return 0;
+    } 
+    if(document.getElementById("text_checkl").value != 1)
+    {
+        check_field("l_name");
         return 0;
     }
     var checkBox1 = document.getElementById("isdonor");
     var checkBox2 = document.getElementById("isdead");
     if (checkBox1.checked == false && checkBox2.checked == false)
     {
-        alert("Error: please choose one of the above!");
+        document.getElementById("border_button1").style.borderColor = "red";
+        document.getElementById("border_button2").style.borderColor = "red";
         return 0;
-    }
+    } 
     choose_name();
     check_radio();
 }
@@ -210,4 +211,36 @@ function copy_button_gen(){
     document.getElementById("copy_button").classList.add("btn-41");
     document.getElementById("copy_button").classList.add("btn41-43");
     document.getElementById("copy_button").onclick = function(){copy_text(document.getElementById("result").textContent)};
+}
+
+
+function check_field(id)
+{
+    if (document.getElementById(id).value == "")
+    {
+        if (id == "f_name")
+        {document.getElementById("text_checkf").value = 0;}
+        else{document.getElementById("text_checkl").value = 0;}
+        document.getElementById(id).style.borderColor = "red";
+    }
+    else
+    {
+        reset_field();
+    }
+}
+
+
+function reset_field(id)
+{
+    document.getElementById(id).style.borderColor = "#49493c";
+    if (id == "f_name")
+        {document.getElementById("text_checkf").value = 1;}
+    else{document.getElementById("text_checkl").value = 1;}
+}
+
+
+function set_buttons()
+{
+    document.getElementById("border_button1").style.borderColor = "#678eb4";
+    document.getElementById("border_button2").style.borderColor = "#678eb4"
 }

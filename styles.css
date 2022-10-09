@@ -157,7 +157,6 @@ hr{
     width: 15px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
-    border-color: black;
     border: solid #678eb4;
     outline: black;
   }
@@ -238,6 +237,8 @@ hr{
 }
 
 .text_input{
+  border-color: #49493c;
+  border-style: solid;
   display:block;
   margin: auto;
   background-color:#7bcace;

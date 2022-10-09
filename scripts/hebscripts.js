@@ -65,19 +65,8 @@ function choose_name()
 {
     var f_name = document.getElementById("f_name").value;
     var l_name = document.getElementById("l_name").value;
-    if (f_name == ""|| l_name == "")
+    if (document.getElementById("text_checkf").value != 1 || + document.getElementById("text_checkl").value != 1)
     {
-        alert("Error: !נא להכניס שם");
-        return 0;
-    }
-    if(!(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(f_name)))
-    {
-        alert("Error: !נא להכניס שם בעברית");
-        return 0;
-    }
-    if(!(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(l_name)))
-    {
-        alert("Error: !נא להכניס שם בעברית");
         return 0;
     }
     document.getElementById('donor').innerHTML = f_name + " " + l_name;
@@ -143,4 +132,29 @@ function copy_button_gen(){
     document.getElementById("copy_button").classList.add("btn-41");
     document.getElementById("copy_button").classList.add("btn41-43");
     document.getElementById("copy_button").onclick = function(){copy_text(document.getElementById("result").textContent)};
+}
+
+
+function check_field(id)
+{
+    if (document.getElementById(id).value == "" || !(/^[\u05D0-\u05EA + ֿ\u05F3]+$/.test(document.getElementById(id).value)))
+    {
+        if (id == "f_name")
+        {document.getElementById("text_checkf").value = 0;}
+        else{document.getElementById("text_checkl").value = 0;}
+        document.getElementById(id).style.borderColor = "red";
+    }
+    else
+    {
+        reset_field();
+    }
+}
+
+
+function reset_field(id)
+{
+    document.getElementById(id).style.borderColor = "#49493c";
+    if (id == "f_name")
+        {document.getElementById("text_checkf").value = 1;}
+    else{document.getElementById("text_checkl").value = 1;}
 }
