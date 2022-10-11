@@ -167,3 +167,10 @@ function reset_field(id)
         {document.getElementById("text_checkf").value = 1;}
     else{document.getElementById("text_checkl").value = 1;}
 }
+
+
+function scroll()
+{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}

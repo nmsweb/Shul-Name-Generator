@@ -7,6 +7,7 @@ var orthfirst = ["Adas", ["Bais", "Beis"], "Ahavas", "Bnai", "Rodfei", ["Or", "O
 var orthsecond = [["T'filah", "Tfilah", "T'filoh", "Tefilah", "T'fillah", "Tfillah", "T'filloh", "Tfilloh", "Tefilla", "Tefillah"], "Torah", ["Yaakov", "Ya'akov"], "Shalom", "Tzion", "Emes", "Achim", "Tzedek", "Efraim", "Dovid","Avraham", "Chessed", "Yeshurun"];
 var nafter = [["Bet", "Beth"], ["Ahavat", "Ahavath"], ["Or", "Ohr"], ["Tiferet", "Tifereth"], ["Shaare", "Sha'are", "Sha'arei", "Shaarei"], "Zichron", "Ner", ""];
 var orth_nafter = [["Bais", "Beis"], "Ahavas", "Bnai", ["Or", "Ohr"], "Tiferes", "Neveh", "Shaarei", "Zichron", "Ner"];
+var last_names = ["Fried", ["Shapiro", "Schapiro", "Shapira"] ,["Friedman", "Friedmann"] ,"Klein" ,"Eisen" ,"Rubin" ,"Himmelfarb" ,"Schwartz" ,"Weinberg" ,"Schechter" ,["Horowitz", "Horovitz", "Horwitz"] ,["Aaronson", "Aronson"] ,"Jacobson" ,["Abrahamson", "Abramson"] ,["Liebowitz", "Leibowitz", "Leibovitz", "Leibovitch", "Leibovich", "Lebowitz", "Lebovitz", "Lebovits"] ,["Levin", "Lewin"] ,"Levi" ,["Cohn", "Cohen"] ,"Schreiber" ,"Weiss" ,"Schwartz","Goldberg" ,"Greenberg",["Edelman", "Edelmann"], ["Hoffman", "Hofman", "Hofmann"], ["Goldman", "Goldmann"], "Blau", ["Bloom", "Blum"], ["Lieberman", "Liebermann"], "Bernstein", "Melamed", "Stern", "Altman", "Landau", "Lichtenstein", "Kaplan", ["Berkowitz", "Berkovitz"], "Bohm", ["Shulman", "Shulmann"], "Perlman"];
 var allfirst;
 var allsec;
 var beginning_rand;
@@ -243,4 +244,11 @@ function set_buttons()
 {
     document.getElementById("border_button1").style.borderColor = "#678eb4";
     document.getElementById("border_button2").style.borderColor = "#678eb4"
+}
+
+
+function scroll()
+{
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
