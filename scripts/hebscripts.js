@@ -100,8 +100,7 @@ function copy_text()
 {
     if (document.getElementById("donor").innerHTML == "")
     {navigator.clipboard.writeText(document.getElementById("result").innerHTML);}
-    else{var x = document.getElementById("result").innerHTML + " על שם " + document.getElementById("donor").innerHTML;
-    navigator.clipboard.writeText(x);}
+    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + " על שם " + document.getElementById("donor").innerHTML);}
     document.getElementById("copy_button").innerHTML= "!הועתק";
     document.getElementById("copy_button").style.borderStyle = "inset";
     document.getElementById("copy_button").classList.remove("btn41-43");
@@ -141,7 +140,7 @@ function copy_button_gen(){
     document.getElementById("copy_button").classList.remove("copy_button_after");
     document.getElementById("copy_button").classList.add("btn-41");
     document.getElementById("copy_button").classList.add("btn41-43");
-    document.getElementById("copy_button").onclick = function(){copy_text(document.getElementById("result").textContent)};
+    document.getElementById("copy_button").onclick = function(){copy_text()};
 }
 
 

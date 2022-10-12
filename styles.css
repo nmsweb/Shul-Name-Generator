@@ -1,4 +1,10 @@
 /* Place your CSS styles in this file */
+html{
+  scroll-behavior: smooth;
+}
+
+
+
 h1, h3{
     text-align: center;
     font-family: 'Times New Roman', Times, serif;
