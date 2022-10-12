@@ -23,6 +23,8 @@ function generator1()
     document.getElementById("donor").innerHTML = "";
     clear_radio();
     clear_box();
+    set_buttons();
+    reset_field();
     if (yeshivish == true)
     {yeshivishf();}
     else
@@ -202,7 +204,7 @@ function copy_text()
 {
     if (document.getElementById("donor").innerHTML == "")
     {navigator.clipboard.writeText(document.getElementById("result").innerHTML);}
-    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + document.getElementById("memory").innerHTML + document.getElementById("donor").innerHTML);}
+    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + "in memory of " + document.getElementById("donor").innerHTML);}
     document.getElementById("copy_button").innerHTML= "Copied!";
     document.getElementById("copy_button").style.borderStyle = "inset";
     document.getElementById("copy_button").classList.remove("btn41-43");
