@@ -63,6 +63,7 @@ function name_after()
 
 function choose_name()
 {
+    scroll();
     var f_name = document.getElementById("f_name").value;
     var l_name = document.getElementById("l_name").value;
     if (document.getElementById("text_checkf").value != 1)

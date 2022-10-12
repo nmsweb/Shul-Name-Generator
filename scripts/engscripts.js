@@ -1,23 +1,21 @@
 var yeshivish;
-
+var x;
 var beginning = ["Temple", "Congregation", ""];
 var first = [["Adath", "Adat"], ["Bet", "Beth"], ["Ahavat", "Ahavath"], ["Knesset", "Knesseth"], ["Bnai", "B'nai","B'ne"], ["Rodeph", "Rodphei"], ["Or", "Ohr"], ["Tiferet", "Tifereth"], ["Mickve", "Mikveh"], ["Anshe", "Anshei"], ["Agudat", "Agudath"], "Neveh", ["Oheiv", "Ohev"], "Ohavei", ["Shaare", "Sha'are", "Sha'arei", "Shaarei"], "Zichron", ["Brit", "Brith", "B'rit", "B'rith"], "Ner"];
-var second = ["El", "Israel", ["Tfila", "T'fila", "T'filah", "Tfilah", "Tfilo", "T'filo", "T'filoh", "Tfiloh", "Tefila", "Tefilah", "Tfilla", "T'filla", "T'fillah", "Tfillah", "Tfillo", "T'fillo", "T'filloh", "Tfilloh", "Tefilla", "Tefillah"], "Torah", "Jacob", ["Shalom", "Sholom"], "Zion", ["Emet", "Emeth"], "Achim", ["Zedek", "Tzedek"], "Sinai", "Ephraim", "David", "Abraham", ["Chesed", "Chessed", "Hessed", "Hesed"], "Jeshurun"];
+var second = ["El", "Jeshurun", ["Tfila", "T'fila", "T'filah", "Tfilah", "Tfilo", "T'filo", "T'filoh", "Tfiloh", "Tefila", "Tefilah", "Tfilla", "T'filla", "T'fillah", "Tfillah", "Tfillo", "T'fillo", "T'filloh", "Tfilloh", "Tefilla", "Tefillah"], ["Chesed", "Chessed", "Hessed", "Hesed"], "Torah", "Zion", ["Emet", "Emeth"], "Achim", ["Zedek", "Tzedek"], "Sinai", "Jacob", ["Shalom", "Sholom"], "Ephraim", "David", "Abraham", "Israel", ["Shlomo", "Sh'lomo", "Solomon"], "Isaac"];
 var orthfirst = ["Adas", ["Bais", "Beis"], "Ahavas", "Bnai", "Rodfei", ["Or", "Ohr"], "Tiferes", "Mikveh", "Agudas", "Neveh", "Shaarei", "Zichron", "Ner"];
-var orthsecond = [["T'filah", "Tfilah", "T'filoh", "Tefilah", "T'fillah", "Tfillah", "T'filloh", "Tfilloh", "Tefilla", "Tefillah"], "Torah", ["Yaakov", "Ya'akov"], "Shalom", "Tzion", "Emes", "Achim", "Tzedek", "Efraim", "Dovid","Avraham", "Chessed", "Yeshurun"];
+var orthsecond = [["T'filah", "Tfilah", "T'filoh", "Tefilah", "T'fillah", "Tfillah", "T'filloh", "Tfilloh", "Tefilla", "Tefillah"], "Torah", "Tzion", "Emes", "Achim", "Tzedek", "Chessed", "Yeshurun", ["Yaakov", "Ya'akov"], "Shalom", "Efraim", "Dovid","Avraham"];
 var nafter = [["Bet", "Beth"], ["Ahavat", "Ahavath"], ["Or", "Ohr"], ["Tiferet", "Tifereth"], ["Shaare", "Sha'are", "Sha'arei", "Shaarei"], "Zichron", "Ner", ""];
 var orth_nafter = [["Bais", "Beis"], "Ahavas", "Bnai", ["Or", "Ohr"], "Tiferes", "Neveh", "Shaarei", "Zichron", "Ner"];
 var last_names = ["Fried", ["Shapiro", "Schapiro", "Shapira"] ,["Friedman", "Friedmann"] ,"Klein" ,"Eisen" ,"Rubin" ,"Himmelfarb" ,"Schwartz" ,"Weinberg" ,"Schechter" ,["Horowitz", "Horovitz", "Horwitz"] ,["Aaronson", "Aronson"] ,"Jacobson" ,["Abrahamson", "Abramson"] ,["Liebowitz", "Leibowitz", "Leibovitz", "Leibovitch", "Leibovich", "Lebowitz", "Lebovitz", "Lebovits"] ,["Levin", "Lewin"] ,"Levi" ,["Cohn", "Cohen"] ,"Schreiber" ,"Weiss" ,"Schwartz","Goldberg" ,"Greenberg",["Edelman", "Edelmann"], ["Hoffman", "Hofman", "Hofmann"], ["Goldman", "Goldmann"], "Blau", ["Bloom", "Blum"], ["Lieberman", "Liebermann"], "Bernstein", "Melamed", "Stern", "Altman", "Landau", "Lichtenstein", "Kaplan", ["Berkowitz", "Berkovitz"], "Bohm", ["Shulman", "Shulmann"], "Perlman"];
-var allfirst;
-var allsec;
 var beginning_rand;
-
-
+var name_worthy;
+var first_random
+var second_random
 
 
 function generator1()
-{
-    if (document.getElementById("result") != "")
+{   if (document.getElementById("result") != "")
     {
         copy_button_gen();
     }
@@ -26,20 +24,29 @@ function generator1()
     clear_radio();
     clear_box();
     if (yeshivish == true)
-    {
-        allfirst = orthfirst;
-        allsec = orthsecond;
-        beginning_rand = "";
-    }
+    {yeshivishf();}
     else
     {
-        allfirst = first;
-        allsec = second;
-        beginning_rand = beginning[Math.floor(Math.random() * beginning.length)];
+        not_yeshivish();
     }
-    //clear_box();
-    var first_random = allfirst[Math.floor(Math.random() * allfirst.length)];
-    var second_random = allsec[Math.floor(Math.random() * allsec.length)];
+    x = second_random;
+    if (isMobile.any()) {document.getElementById("copy_button").style.visibility = "visible";}
+}
+
+
+
+function not_yeshivish()
+{
+    beginning_rand = beginning[Math.floor(Math.random() * beginning.length)];
+    first_random = first[Math.floor(Math.random() * first.length)];
+    second_random = second[Math.floor(Math.random() * second.length)];
+    if(second.indexOf(second_random)>9)
+    {
+        document.getElementById("alshem").style.visibility = "visible";
+    }
+    else{
+        document.getElementById("alshem").style.visibility = "hidden";
+    }
     if (Array.isArray(first_random)) {
         first_random = first_random[Math.floor(Math.random() * first_random.length)]
     }
@@ -48,27 +55,48 @@ function generator1()
     }
     document.getElementById("result").innerHTML = (beginning_rand + " " + first_random + ' ' + second_random);
     document.getElementById("result").style.fontSize = "x-large";
-    if (isMobile.any()) {document.getElementById("copy_button").style.visibility = "visible";}
+}
+
+function yeshivishf()
+{
+    first_random = orthfirst[Math.floor(Math.random() * orthfirst.length)];
+    second_random = orthsecond[Math.floor(Math.random() * orthsecond.length)];
+    if(orthsecond.indexOf(second_random)>7)
+    {
+        document.getElementById("alshem").style.visibility = "visible";
+    }
+    else{
+        document.getElementById("alshem").style.visibility = "hidden";
+    }
+    if (Array.isArray(first_random)) {
+        first_random = first_random[Math.floor(Math.random() * first_random.length)]
+    }
+    if (Array.isArray(second_random)) {
+        second_random = second_random[Math.floor(Math.random() * second_random.length)]
+    }
+    document.getElementById("result").innerHTML = (first_random + ' ' + second_random);
+    document.getElementById("result").style.fontSize = "x-large";
 }
 
 
 function generator2(f_name)
 {
+    document.getElementById("alshem").style.visibility = "visible";
     if (document.getElementById("result") != "")
     {
         copy_button_gen();
     }
     if (yeshivish == true)
     {
-        allfirst = orth_nafter;
+        first = orth_nafter;
         beginning_rand = "";
     }
     else
     {
-        allfirst = nafter;
+        first = nafter;
         beginning_rand = beginning[Math.floor(Math.random() * beginning.length)];
     }
-    var first_random = allfirst[Math.floor(Math.random() * allfirst.length)];
+    var first_random = first[Math.floor(Math.random() * first.length)];
     if (Array.isArray(first_random)) {
         first_random = first_random[Math.floor(Math.random() * first_random.length)]
     }
@@ -107,8 +135,9 @@ function check_radio()
 }
 
 
-function two_things()
+function three_things()
 {
+    scroll();
     var f_name = document.getElementById("f_name").value;
     var l_name = document.getElementById("l_name").value;
     if (document.getElementById("text_checkf").value != 1)
@@ -251,4 +280,17 @@ function scroll()
 {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+
+function name_after()
+{
+    var l_name = last_names[Math.floor(Math.random() * last_names.length)];
+    if (Array.isArray(l_name))
+    {
+        l_name = l_name[Math.floor(Math.random() * l_name.length)];
+    }
+    document.getElementById("memory").innerHTML= "In memory of";
+    document.getElementById("donor").innerHTML = (x + " " + l_name);
+    document.getElementById("donor").style.fontSize = "x-large";
 }
