@@ -24,7 +24,8 @@ function generator1()
     clear_radio();
     clear_box();
     set_buttons();
-    reset_field();
+    reset_field("f_name");
+    reset_field("l_name");
     if (yeshivish == true)
     {yeshivishf();}
     else
@@ -139,29 +140,22 @@ function check_radio()
 
 function three_things()
 {
-    scroll();
-    var f_name = document.getElementById("f_name").value;
-    var l_name = document.getElementById("l_name").value;
-    if (document.getElementById("text_checkf").value != 1)
-    {
-        check_field("f_name");
-        return 0;
-    } 
-    if(document.getElementById("text_checkl").value != 1)
-    {
-        check_field("l_name");
-        return 0;
-    }
     var checkBox1 = document.getElementById("isdonor");
     var checkBox2 = document.getElementById("isdead");
+    check_field("f_name");
+    check_field("l_name");
     if (checkBox1.checked == false && checkBox2.checked == false)
     {
         document.getElementById("border_button1").style.borderColor = "red";
         document.getElementById("border_button2").style.borderColor = "red";
-        return 0;
     } 
+    if (document.getElementById("text_checkf").value != 1 || document.getElementById("text_checkl").value != 1 || (checkBox1.checked == false && checkBox2.checked == false))
+    {
+        return 0;
+    }
     choose_name();
     check_radio();
+    scroll();
 }
 
 
@@ -251,7 +245,7 @@ function copy_button_gen(){
 function check_field(id)
 {
     if (document.getElementById(id).value == "")
-    {
+    {   
         if (id == "f_name")
         {document.getElementById("text_checkf").value = 0;}
         else{document.getElementById("text_checkl").value = 0;}
@@ -259,7 +253,7 @@ function check_field(id)
     }
     else
     {
-        reset_field();
+        reset_field(id);
     }
 }
 
