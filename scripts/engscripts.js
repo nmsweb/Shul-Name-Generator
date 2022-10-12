@@ -290,7 +290,6 @@ function name_after()
     {
         l_name = l_name[Math.floor(Math.random() * l_name.length)];
     }
-    document.getElementById("memory").innerHTML= "In memory of";
     document.getElementById("donor").innerHTML = (x + " " + l_name);
     document.getElementById("donor").style.fontSize = "x-large";
 }
