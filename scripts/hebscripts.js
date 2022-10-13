@@ -63,22 +63,18 @@ function name_after()
 
 function choose_name()
 {
-    scroll();
+    check_field("f_name");
+    check_field("l_name");
     var f_name = document.getElementById("f_name").value;
     var l_name = document.getElementById("l_name").value;
-    if (document.getElementById("text_checkf").value != 1)
+    if (document.getElementById("text_checkf").value != 1 || document.getElementById("text_checkl").value != 1)
     {
-        check_field("f_name");
-        return 0;
-    }
-    else if(document.getElementById("text_checkl").value != 1)
-    {
-        check_field("l_name");
         return 0;
     }
     document.getElementById('donor').innerHTML = f_name + " " + l_name;
     document.getElementById("alshem").style.visibility="visible";
     generator2(f_name);
+    scroll();
 }
 
 
@@ -155,7 +151,7 @@ function check_field(id)
     }
     else
     {
-        reset_field();
+        reset_field(id);
     }
 }
 

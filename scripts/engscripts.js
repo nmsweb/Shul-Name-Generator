@@ -10,8 +10,8 @@ var orth_nafter = [["Bais", "Beis"], "Ahavas", "Bnai", ["Or", "Ohr"], "Tiferes",
 var last_names = ["Fried", ["Shapiro", "Schapiro", "Shapira"] ,["Friedman", "Friedmann"] ,"Klein" ,"Eisen" ,"Rubin" ,"Himmelfarb" ,"Schwartz" ,"Weinberg" ,"Schechter" ,["Horowitz", "Horovitz", "Horwitz"] ,["Aaronson", "Aronson"] ,"Jacobson" ,["Abrahamson", "Abramson"] ,["Liebowitz", "Leibowitz", "Leibovitz", "Leibovitch", "Leibovich", "Lebowitz", "Lebovitz", "Lebovits"] ,["Levin", "Lewin"] ,"Levi" ,["Cohn", "Cohen"] ,"Schreiber" ,"Weiss" ,"Schwartz","Goldberg" ,"Greenberg",["Edelman", "Edelmann"], ["Hoffman", "Hofman", "Hofmann"], ["Goldman", "Goldmann"], "Blau", ["Bloom", "Blum"], ["Lieberman", "Liebermann"], "Bernstein", "Melamed", "Stern", "Altman", "Landau", "Lichtenstein", "Kaplan", ["Berkowitz", "Berkovitz"], "Bohm", ["Shulman", "Shulmann"], "Perlman"];
 var beginning_rand;
 var name_worthy;
-var first_random
-var second_random
+var first_random;
+var second_random;
 
 
 function generator1()
@@ -198,7 +198,7 @@ function copy_text()
 {
     if (document.getElementById("donor").innerHTML == "")
     {navigator.clipboard.writeText(document.getElementById("result").innerHTML);}
-    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + "in memory of " + document.getElementById("donor").innerHTML);}
+    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + " in memory of " + document.getElementById("donor").innerHTML);}
     document.getElementById("copy_button").innerHTML= "Copied!";
     document.getElementById("copy_button").style.borderStyle = "inset";
     document.getElementById("copy_button").classList.remove("btn41-43");
