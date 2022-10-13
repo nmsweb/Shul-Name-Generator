@@ -12,6 +12,7 @@ var beginning_rand;
 var name_worthy;
 var first_random;
 var second_random;
+var mem_button = [" Generously donated by ", " In memory of "];
 
 
 function generator1()
@@ -19,7 +20,6 @@ function generator1()
     {
         copy_button_gen();
     }
-    document.getElementById("memory").innerHTML = "";
     document.getElementById("donor").innerHTML = "";
     clear_radio();
     clear_box();
@@ -32,8 +32,9 @@ function generator1()
     {
         not_yeshivish();
     }
+    document.getElementById("alshem").innerHTML = mem_button[Math.floor(Math.random() * mem_button.length)];
     x = second_random;
-    if (isMobile.any()) {document.getElementById("copy_button").style.visibility = "visible";}
+    if (isMobile.any()){document.getElementById("copy_button").style.visibility = "visible";}
 }
 
 
@@ -129,11 +130,11 @@ function check_radio()
     var checkBox2 = document.getElementById("isdead");
     if(checkBox1.checked == true)
     {
-        document.getElementById("memory").innerHTML = "Generously donated by";
+        document.getElementById("alshem").innerHTML = " Generously donated by ";
     }
     else if(checkBox2.checked == true)
     {
-        document.getElementById("memory").innerHTML = "In memory of";
+        document.getElementById("alshem").innerHTML = " In memory of ";
     }
 }
 
@@ -198,7 +199,7 @@ function copy_text()
 {
     if (document.getElementById("donor").innerHTML == "")
     {navigator.clipboard.writeText(document.getElementById("result").innerHTML);}
-    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + " in memory of " + document.getElementById("donor").innerHTML);}
+    else{navigator.clipboard.writeText(document.getElementById("result").innerHTML + document.getElementById("alshem").innerHTML + document.getElementById("donor").innerHTML);}
     document.getElementById("copy_button").innerHTML= "Copied!";
     document.getElementById("copy_button").style.borderStyle = "inset";
     document.getElementById("copy_button").classList.remove("btn41-43");
