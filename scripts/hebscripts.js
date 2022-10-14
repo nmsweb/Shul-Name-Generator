@@ -167,6 +167,37 @@ function reset_field(id)
 
 function scroll()
 {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 207;
+    document.documentElement.scrollTop = 207;
+}
+
+
+function display_gen()
+{
+    if (document.getElementById("first_check").checked)
+    {
+        document.getElementById("first_div").style.display = "block";
+        document.body.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+    }
+    else{
+        document.getElementById("first_div").style.display = "none";
+        document.body.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+    }
+}
+
+function display_name()
+{
+    if (document.getElementById("second_check").checked)
+    {
+        document.getElementById("second_div").style.display = "block";
+        document.body.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+    }
+    else{
+        document.getElementById("second_div").style.display = "none";
+        document.body.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+    }
 }

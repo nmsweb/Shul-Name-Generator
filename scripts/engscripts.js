@@ -277,8 +277,8 @@ function set_buttons()
 
 function scroll()
 {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 255;
+    document.documentElement.scrollTop = 255;
 }
 
 
@@ -291,4 +291,36 @@ function name_after()
     }
     document.getElementById("donor").innerHTML = (x + " " + l_name);
     document.getElementById("donor").style.fontSize = "x-large";
+}
+
+
+
+function display_gen()
+{
+    if (document.getElementById("first_check").checked)
+    {
+        document.getElementById("first_div").style.display = "block";
+        document.body.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+    }
+    else{
+        document.getElementById("first_div").style.display = "none";
+        document.body.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+    }
+}
+
+function display_name()
+{
+    if (document.getElementById("second_check").checked)
+    {
+        document.getElementById("second_div").style.display = "block";
+        document.body.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
+    }
+    else{
+        document.getElementById("second_div").style.display = "none";
+        document.body.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+        document.documentElement.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
+    }
 }
