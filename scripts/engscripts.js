@@ -154,6 +154,8 @@ function three_things()
     {
         return 0;
     }
+    document.getElementById("first_check").checked = true;
+    document.getElementById("first_div").style.display = "block";
     choose_name();
     check_radio();
     scroll();

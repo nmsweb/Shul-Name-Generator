@@ -73,6 +73,8 @@ function choose_name()
     }
     document.getElementById('donor').innerHTML = f_name + " " + l_name;
     document.getElementById("alshem").style.visibility="visible";
+    document.getElementById("first_check").checked = true;
+    document.getElementById("first_div").style.display = "block";
     generator2(f_name);
     scroll();
 }
