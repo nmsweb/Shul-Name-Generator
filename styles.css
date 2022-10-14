@@ -224,7 +224,23 @@ hr{
   .checkboxes label span {
     vertical-align: middle;
   }
+  .checkboxes 
+  {
+    margin-left: 45%;
+  }
 
+  .checkboxes1 label {
+    display: inline-block;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  .checkboxes1 input {
+    vertical-align: middle;
+  }
+  .checkboxes1 label span {
+    vertical-align: middle;
+  }
+  
 
 
 
@@ -296,8 +312,8 @@ hr{
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border: solid #678eb4;
 }
@@ -326,8 +342,8 @@ hr{
 
 /* Style the checkmark/indicator */
 .container2 .checkmark2:after {
-  left: 9px;
-  top: 5px;
+  left: 7px;
+  top: 2px;
   width: 5px;
   height: 10px;
   border: solid white;
