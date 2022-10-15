@@ -299,7 +299,7 @@ function name_after()
 
 function display_gen()
 {
-    if (document.getElementById("first_check").checked)
+    if (document.getElementById("first_div").style.display == "none")
     {
         document.getElementById("first_div").style.display = "block";
         document.body.scrollTop = window.scrollY + document.querySelector('#first_div').getBoundingClientRect().top;
@@ -314,7 +314,7 @@ function display_gen()
 
 function display_name()
 {
-    if (document.getElementById("second_check").checked)
+    if (document.getElementById("second_div").style.display == "none")
     {
         document.getElementById("second_div").style.display = "block";
         document.body.scrollTop = window.scrollY + document.querySelector('#second_div').getBoundingClientRect().top;
